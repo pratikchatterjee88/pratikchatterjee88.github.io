@@ -1,0 +1,16 @@
+title: "Pratik Chatterjee"
+description: "Digital Transformation & Data Science Leader"
+theme: minima
+
+author:
+  name: "Pratik Chatterjee"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+minima:
+  social_links:
+    github: pratikchatterjee88
+    linkedin: pratikchatterjee88
+    email: pratikchatterjee88@gmail.com
