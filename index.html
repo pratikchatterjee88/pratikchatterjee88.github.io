@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +35,8 @@
       z-index: 9999;
       background-color: white;
     }
-    /* Hi there greeting bubble*/
+
+    /* Hi there greeting bubble */
     #chat-greeting {
       position: fixed;
       bottom: 90px;
@@ -67,10 +67,8 @@
         transform: scale(1) translateY(0);
       }
     }
-
   </style>
 </head>
-
 <body>
   <div class="container">
     <aside class="sidebar">
@@ -78,6 +76,7 @@
       <h1>Pratik Chatterjee</h1>
       <p>Data Scientist & Transformation Leader</p>
     </aside>
+
 
     <main class="content">
       <section>
@@ -122,45 +121,35 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Contact</h2>
-        <p>Email: pratikchatterjee88@gmail.com<br/>
-           GitHub: <a href="https://github.com/pratikchatterjee88">pratikchatterjee88</a></p>
-      </section>  
-    </main>
-  </div>
-
-  <!-- Greeting Bubble -->
+  <!-- ✅ Chatbot Greeting Bubble -->
   <div id="chat-greeting">Hi there 👋</div>
 
-  <!-- Chatbot iframe container (initially hidden) -->
+  <!-- ✅ Chatbot Iframe Container -->
   <div id="chatbot-container">
     <iframe 
-      src="https://pratikchatterjee88-portfolio-chat.hf.space" 
-      width="100%" 
-      height="100%" 
-      style="border: none;">
-    </iframe>
+      src="https://huggingface.co/spaces/YOUR_USERNAME/YOUR_CHATBOT/embed"
+      width="100%"
+      height="100%"
+      style="border: none;"></iframe>
   </div>
 
-  <!-- Toggle button using profile picture -->
-  <img id="chat-toggle-btn" src="assets/pratik.jpeg" alt="Chatbot Icon" />
+  <!-- ✅ Chatbot Toggle Button with Your Photo -->
+  <img id="chat-toggle-btn" src="assets/profile.jpg" alt="Chatbot Icon" />
 
-  <!-- Toggle script -->
+  <!-- ✅ JavaScript to Toggle Chat & Hide Greeting -->
   <script>
     const toggleBtn = document.getElementById("chat-toggle-btn");
-    const chatbotContainer = document.getElementById("chatbot-container");
+    const chatbot = document.getElementById("chatbot-container");
     const greeting = document.getElementById("chat-greeting");
 
     toggleBtn.addEventListener("click", () => {
-      const isVisible = chatbotContainer.style.display =="block"; 
-      chatbotContainer.style.display === isVisible ? "none" : "block";
+      const isVisible = chatbot.style.display === "block";
+      chatbot.style.display = isVisible ? "none" : "block";
 
-      //Hide greeting on open
-      if (!isVisible && greeting.style.display !=="none") {
-        greeting.style.display =  "none";
-      } 
-
+      // ✅ Hide the "Hi there" greeting the moment chat opens
+      if (!isVisible && greeting) {
+        greeting.style.display = "none";
+      }
     });
   </script>
 </body>
